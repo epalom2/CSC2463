@@ -1,11 +1,13 @@
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(500, 250);
+  background(0 , 255, 0);
 }
 
 function draw() {
-  background(222);
-  circle(250, 250, 500);
-  circle(150, 150, 50);
-  circle(350, 150, 50);
-  line( 75, 300, 350, 250 )
+  
+  circle(125, 120, 210);
+  
+  square(275, 25, 200);
 }
+
+
