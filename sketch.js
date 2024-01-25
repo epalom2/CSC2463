@@ -13,7 +13,8 @@ function draw() {
   //example 1
   fill(0, 225, 0)
   rect(10, 10, 290, 150);
- 
+  
+  strokeWeight(2);
   stroke(0);
   fill(255);
   circle(85, 85, 130);
@@ -37,7 +38,7 @@ function draw() {
 
   //example 3 
   fill(0);
-  rect(400, 10, 300, 160);
+  rect(400, 10, 300, 150);
 
   fill(255, 255, 0);
   circle(470, 90, 100);
@@ -59,6 +60,33 @@ function draw() {
 
   fill(0, 0, 255);
   circle(645, 80, 20);
+
+  //example 4
+  fill(0, 0, 120);
+  rect(400, 250, 300, 300)
+
+  
+  strokeWeight(4);
+  stroke(255);
+  fill(0, 150, 0);
+  circle(550, 400, 170 );
+
+  fill(255, 0, 0);
+  beginShape();
+  let radius1 =90; 
+  let radius2 = 35; 
+  let startAngle = -PI / 5 + PI / 10;
+  for (let i = 0; i < 5; i++) {
+    let angle1 = TWO_PI / 5 * i + startAngle;
+    let angle2 = TWO_PI / 5 * (i + 0.5) + startAngle;
+    let x1 = cos(angle1) * radius1 + 550;
+    let y1 = sin(angle1) * radius1 + 400;
+    let x2 = cos(angle2) * radius2 + 550;
+    let y2 = sin(angle2) * radius2 + 400;
+    vertex(x1, y1);
+    vertex(x2, y2);
+  }
+  endShape(CLOSE);
 }
 
 
