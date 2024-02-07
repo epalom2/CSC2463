@@ -14,6 +14,7 @@ let palette = [
 let currentColor = '#000000'; // Initial color is black
 let brushSize = 10; // Initial brush size
 let paletteWidth = 30; // Width of the color palette
+let canDraw = true; // Flag to control drawing
 
 function setup() {
   createCanvas(1500, 800);
@@ -21,15 +22,12 @@ function setup() {
 }
 
 function draw() {
-  // Draw when mouse is pressed and not on the palette,
-  // and add a buffer zone for safety if necessary
-  if (mouseIsPressed && mouseX > (paletteWidth + 5)) { // Added a 5 pixel buffer zone for clarity
+  if (mouseIsPressed && mouseX > (paletteWidth + 5) && canDraw) {
     stroke(currentColor);
     strokeWeight(brushSize);
     line(pmouseX, pmouseY, mouseX, mouseY);
   }
 }
-
 
 function drawPalette() {
   let boxHeight = height / palette.length;
@@ -41,9 +39,12 @@ function drawPalette() {
 }
 
 function mouseClicked() {
-  // Check if the mouse is within the palette area
   if (mouseX < paletteWidth && mouseY < height) {
     let index = Math.floor(mouseY / (height / palette.length));
     currentColor = palette[index];
+    canDraw = false; // Disable drawing right after color selection
+    setTimeout(() => canDraw = true, 100); // Re-enable drawing after 100 milliseconds
+  } else {
+    canDraw = true; // Ensure drawing is enabled when clicking outside the palette
   }
 }
