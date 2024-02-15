@@ -1,8 +1,8 @@
 let sprite;
 
 function preload() {
-    sprite = new Sprite(200, 200, 80, 80);
-    sprite.spriteSheet = 'libraries/PC Computer - Spelunky - Green.png'
+    sprite = new Sprite(200,200,80,80);
+    sprite.spriteSheet = 'assets/PC Computer - Spelunky - Green.png'
     let animations = {
         stand: {row: 0, frames: 1},
         walkRight: {row: 0, col: 1, frames: 8},
@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup(){
-    createCanvas(400, 400);
+    createCanvas(600, 600);
 }
 
 function draw(){
@@ -23,7 +23,9 @@ function draw(){
     if(sprite.x > width) {
         sprite.vel.x = -1;
         sprite.scale.x = -1;
-    }
+    } else if (sprite.x - sprite.width/4 > width)
+    sprite.vel.x = 1;
+    sprite.scale.x = 1;
 }
 
 function keyTyped() {
