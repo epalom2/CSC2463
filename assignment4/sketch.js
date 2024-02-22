@@ -255,7 +255,7 @@ class WalkingAnimation {
 
     increaseSpeed() {
         // Multiply the current speed and framerate by a factor to increase the bug's speed
-        this.speed *= 1.3;
-        this.framerate *= 1.3;
+        this.speed *= 1.2;
+        this.framerate *= 1.2;
     }
 }
