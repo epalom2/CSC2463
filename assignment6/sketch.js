@@ -1,17 +1,17 @@
 
 
 let synth = new Tone.PolySynth(Tone.Synth);
-let bend = new Tone.PitchShift(Tone.Synth);
+let bend = new Tone.PitchShift();
 
-bend.pitch =0;
-synth.connect();
+bend.pitch = 0;
+synth.connect(bend);
 bend.toDestination();
 
 function setup() {
   createCanvas(400, 400);
 
 
-pitchSlider = createSlider(0, 12, 0, 0.1);
+pitchSlider = createSlider(-12, 12, 0, 0.1);
 pitchSlider.position (120, 200);
 pitchSlider.mouseMoved(()=> bend.pitch = pitchSlider.value());
 }
@@ -39,6 +39,6 @@ function keyReleased(){
 
 
 function draw() {
-  background(220);
-  text('play A-K for synth', 150, 200);
+  background(150, 0, 200);
+  text('play A-K for synth', 140, 170);
 }
