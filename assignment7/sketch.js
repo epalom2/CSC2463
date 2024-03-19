@@ -26,7 +26,7 @@ function setup() {
   lfo = new Tone.LFO({
     frequency: 10,  
     min: 10,       
-    max: 60000        
+    max: 70000        
   });
   lfo.connect(osc.oscillator.frequency);
   lfo.start();
