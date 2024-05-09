@@ -61,7 +61,7 @@ If you notice, the code has a resetGame() and displayScore() function for succes
 ![alt text](assets/VictoryScreen2463.png)
 
 #### Playing State(Gameplay of actual project screenshot)
-![alt text](assets/VictoryScreen2463.png)
+![alt text](assets/Gameplay2463.png)
 
 For our main character, we imported a sprite sheet from the internet that is inspiered from the game Splunky. the name of the character himself is from another game called meatboy. We used this sprite sheet to animate our charater, as well as animations to have him walk around the map. 
 
