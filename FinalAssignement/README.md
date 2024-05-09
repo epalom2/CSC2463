@@ -75,7 +75,7 @@ Characters and devices first had to be loaded into the project using "load" int 
 This shows how the sprites and devices were loaded into the canvas, along with the animation logic for the main Character. If you notice, animations defines the exact rows/ columns of the characters movement depending on which direction they are walking in. This works by specifying the frames that should be played in row/ column to display the animation of each walking direction.
 
 #### Sprite sheet used:
-![alt text](assets/PC Computer - Spelunky - Meat Boy.png)
+![alt text](assets/PCComputer-Spelunky-MeatBoy.png)
 
 #### Device sprite
 ![alt text](assets/TheDevice.png)
@@ -140,13 +140,13 @@ Apart from that, a simple serial reading was used to tell the project what color
 
 ![alt text](assets/SetUp2463.png)
 
-![alt text](assets/SetUp2463 2.png)
+![alt text](assets/SetUp24632.png)
 
-![alt text](assets/SetUp2463 3.png)
+![alt text](assets/SetUp24633.png)
 
 Lastly, here is a live demo of the project:
 
-#### LIVE DEMO
-![alt text](assets/IMG_3033.mp4)
+#### LIVE DEMO Link
+https://youtube.com/shorts/z0XkqT2vr-0
 
 In the future, I would love to implement a diffeculty feature, where the games character will move more slower after a device is selected, progressively makeing it harder as you play. Another idea would to only show one device at a time and once you select one, another will spawn in randomly until you reach 10.

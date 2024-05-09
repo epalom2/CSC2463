@@ -43,7 +43,7 @@ function preload() {
       walkDown: {row: 5, col:6, frames: 6}
   };
   
-  characters.push(new Character(400,300,80,80,'assets/PC Computer - Spelunky - Meat Boy.png', animations));
+  characters.push(new Character(400,300,80,80,'assets/PCComputer-Spelunky-MeatBoy.png', animations));
   bgImage = loadImage('assets/newMapP5.png');
   deviceImage = loadImage('assets/TheDevice.png');
   startImage = loadImage('assets/walkieTalkie1.png')
